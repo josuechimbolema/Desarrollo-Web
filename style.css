@@ -1,0 +1,67 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --rose: #D4537E;
+  --rose-light: #FBEAF0;
+  --cream: #FAF8F5;
+  --ink: #1a1a1a;
+  --muted: #888;
+  --border: rgba(0,0,0,0.08);
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: #fff;
+}
+
+.logo {
+  font-family: 'Playfair Display';
+  color: var(--rose);
+}
+
+/* PRODUCTOS */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+  gap: 20px;
+}
+
+.producto {
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.precio {
+  color: var(--rose);
+  font-weight: bold;
+}
+
+/* BOTONES */
+button {
+  background: var(--rose);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* CARRITO */
+.carrito {
+  background: #fff;
+  padding: 15px;
+}
+
+/* CHECKOUT */
+.checkout-section {
+  background: #fff;
+  padding: 20px;
+}

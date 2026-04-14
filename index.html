@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yoselyn Store 🌸</title>
+
+  <!-- FUENTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="logo">🌸 Yoselyn Store</div>
+  <nav class="nav-links">
+    <a href="#">Inicio</a>
+    <a href="#">Productos</a>
+    <a href="#">Ofertas</a>
+  </nav>
+  <button class="cart-btn" onclick="scrollToCart()">
+    🛒 Carrito
+    <span class="cart-count" id="cartCount">0</span>
+  </button>
+</header>
+
+<div class="hero">
+  <h2>Colección exclusiva</h2>
+  <p>Productos seleccionados para ti con amor ✨</p>
+</div>
+
+<div class="layout">
+  <div>
+    <h3 class="section-title">Nuestros productos</h3>
+    <div class="productos" id="productosGrid"></div>
+  </div>
+
+  <aside class="carrito" id="carritoPanel">
+    <h2>Tu carrito</h2>
+    <div class="carrito-items" id="carritoItems">
+      <p class="carrito-empty">Tu carrito está vacío 🛍️</p>
+    </div>
+    <div class="cart-total" id="cartTotalWrap" style="display:none">
+      <span>Total</span>
+      <span id="cartTotal">$0</span>
+    </div>
+    <button class="checkout-btn" id="checkoutBtn" disabled onclick="scrollToCheckout()">
+      Finalizar compra →
+    </button>
+  </aside>
+</div>
+
+<div class="checkout-wrap">
+  <div class="checkout-section" id="checkoutSection">
+    <h2>Pago seguro 🔒</h2>
+
+    <div class="form-group">
+      <label>Nombre completo</label>
+      <input type="text" id="nombre">
+    </div>
+
+    <div class="form-group">
+      <label>Número de tarjeta</label>
+      <input type="text" id="cardNum">
+    </div>
+
+    <div class="fila">
+      <input type="text" id="cardExp" placeholder="MM/AA">
+      <input type="text" id="cardCvv" placeholder="CVV">
+    </div>
+
+    <button class="checkout-btn" onclick="pay()">Pagar ahora</button>
+  </div>
+</div>
+
+<footer>
+  Hecho con por <strong>Yoselyn Store</strong>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<!-- JS -->
+<script src="script.js"></script>
+</body>
+</html>
